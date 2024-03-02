@@ -11,20 +11,6 @@ plugins {
 }
 
 rootProject.name = "ZeroHungryApp"
-include("app", "list", "utilities")
-include("app:order-service")
-findProject(":app:order-service")?.name = "order-service"
-include("app:order-service:order-application")
-findProject(":app:order-service:order-application")?.name = "order-application"
-include("app:order-service:order-container")
-findProject(":app:order-service:order-container")?.name = "order-container"
-include("app:order-service:order-dataaccess")
-findProject(":app:order-service:order-dataaccess")?.name = "order-dataaccess"
-include("app:order-service:order-domain")
-findProject(":app:order-service:order-domain")?.name = "order-domain"
-include("app:order-service:order-messaging")
-findProject(":app:order-service:order-messaging")?.name = "order-messaging"
-include("app:order-service:order-domain:order-application-service")
-findProject(":app:order-service:order-domain:order-application-service")?.name = "order-application-service"
-include("app:order-service:order-domain:order-domain-core")
-findProject(":app:order-service:order-domain:order-domain-core")?.name = "order-domain-core"
+include("common")
+include("common:domain")
+findProject(":common:domain")?.name = "domain"
